@@ -1,40 +1,60 @@
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap");
-.content {
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap");
+body {
+  height: 100%;
+}
+body .content {
   text-align: center;
-  width: 60%;
-  height: 50vh;
-  margin: 110px auto;
+  width: 50%;
+  margin: 20vh auto;
   font-family: "Averia Serif Libre", cursive;
-  animation: easeContent 0.5s linear;
+  animation: easeContent 0.5s ease-in-out;
 }
-.content .quote {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 44px;
+body .content .quote {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 48px;
 }
-.content .author {
-  font-size: 24px;
+body .content .author {
+  font-size: 20px;
   line-height: 28px;
   font-weight: 300;
 }
-
-.names {
-  text-align: center;
+@media screen and (max-width: 1440px) {
+  body .content {
+    width: 75%;
+  }
 }
-.names span {
+body .names {
+  position: absolute;
+  bottom: 34px;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+body .names span {
   font-family: "Open Sans", sans-serif;
 }
-.names span:not(:last-child) {
+body .names span:not(:last-child) {
   margin-right: 5px;
 }
-.names span a {
+body .names span a {
   color: #000000;
   opacity: 0.3;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
 }
-.names span a:hover {
+body .names span a:hover {
   opacity: 1;
+}
+
+@keyframes easeContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
