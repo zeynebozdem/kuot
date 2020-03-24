@@ -20,11 +20,12 @@ var _gaq = _gaq || [];
 
     var quote = document.querySelector(".quote");
     var author = document.querySelector(".author");
-    var mood = document.querySelector(".mood");
+    //var mood = document.querySelector(".mood");
     var randomQuoteNumber = Math.floor(Math.random() * data.length); //returns random word from compactData
 
     quote.innerHTML = data[randomQuoteNumber][0];
     author.innerHTML = data[randomQuoteNumber][1];
+    //mood.innerHTML = "#" + data[randomQuoteNumber][2];
     
     var paletteData = 6;
 
@@ -43,9 +44,9 @@ var _gaq = _gaq || [];
 
     function colorGenerator(paletteMinMaxBody,paletteMinMaxContent) {
         document.body.style.backgroundColor =`rgb(${Math.floor(Math.random() * (paletteMinMaxBody.max - paletteMinMaxBody.min)) + paletteMinMaxBody.min},${Math.floor(Math.random() * (paletteMinMaxBody.max - paletteMinMaxBody.min)) + paletteMinMaxBody.min},${Math.floor(Math.random() * (paletteMinMaxBody.max - paletteMinMaxBody.min)) + paletteMinMaxBody.min})`;
-        console.log(document.body.style.backgroundColor);
+        //console.log(document.body.style.backgroundColor);
         document.querySelector(".content").style.color =`rgb(${Math.floor(Math.random() *( paletteMinMaxContent.max - paletteMinMaxContent.min)) + paletteMinMaxContent.min},${Math.floor(Math.random() * (paletteMinMaxContent.max - paletteMinMaxContent.min)) + paletteMinMaxContent.min},${Math.floor(Math.random() * (paletteMinMaxContent.max - paletteMinMaxContent.min)) + paletteMinMaxContent.min})`;
-        console.log(document.querySelector(".content").style.color);
+        //console.log(document.querySelector(".content").style.color);
         document.querySelectorAll(".names a").forEach(function (item) {
             item.style.color = document.querySelector(".content").style.color;    
         });  
